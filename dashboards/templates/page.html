@@ -1,0 +1,13 @@
+<script src="https://unpkg.com/htmx.org@2.0.1"></script>
+
+<h1>{{ title }}</h1>
+
+
+{% for department in departments %}
+  <h2>{{ department.name }}</h2>
+  <ul>
+    {% for person in department.people %}
+      <li>{{ person.name }}</li>
+    {% endfor %}
+  </ul>
+{% endfor %}
